@@ -1,2 +1,2 @@
-# RobustAssayAnalysis
-Data and analysis code for manuscript
+# Plates
+Plate reader .txt files used for this analysis
