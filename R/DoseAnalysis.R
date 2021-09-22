@@ -204,7 +204,7 @@ SummPerPlate2 = merge (SummPerPlate, EstTruth, by=c("Assay", "Sample"))
 
 CmpdData3 = merge (CmpdData2, EstTruth, by=c("Assay", "Sample"))
 
-### Plot summary value per plate vs. estimated true value, means or medians. Fig 5
+ ### Plot summary value per plate vs. estimated true value, means or medians. Fig 5
 
 T1EstTrueMeanN1 <- ggplot (filter(CmpdData3, Assay == 'Tgt1'), aes(x=true.mean.est, y=PctAct.Mean)) +
   geom_point() +
