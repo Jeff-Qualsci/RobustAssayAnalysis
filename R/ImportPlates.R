@@ -31,7 +31,7 @@ TempData <- TempData %>%
   group_by(File, ExpTime) %>%
   mutate(MedScaleData = rescale_med(Data),
          Active = MedScaleData < 0.2,
-         PlateMap = if_else(sum(Active) > 100, 'Dose', 'Uniform')) %>%
+         PlateMap = if_else(sum(Active) > 100, 'Dose', 'Uniform')) %>% # Determine plate layout
   select(-MedScaleData, -Active) %>%
   ungroup() %>%
   group_by(File, ExpTime, PlateMap) %>%
